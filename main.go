@@ -50,9 +50,11 @@ func main() {
 	}
 	defer file.Close()
 
+	fmt.Fprintln(file, "<html><head><link rel=\"stylesheet\" href=\"scroll-animate.css\"></head><body><div class=\"wrapper\">")
 	for _, product := range recommendMap {
 		fmt.Fprintln(file, product.HTMLString())
 	}
+	fmt.Fprintln(file, "</div><img src=\"https://arbysshop.com/cdn/shop/files/Arbys_Shop_Logo-01_134x134_crop_center_2x_27f0faa4-77aa-4063-8fdf-b640c9b0c685_200x.png?v=1613715441\" alt=\"Arbys Shop Banner\" class=\"banner\"/></body></html>")
 }
 
 func processResponse(resp *[]byte, recommendMap map[string]Product) []string {
