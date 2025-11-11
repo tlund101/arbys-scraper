@@ -13,7 +13,7 @@ div.wrapper {
     position: relative;
     height: 100vh;
     width: 100%;
-    transform: rotateX(-30deg) translateZ(-2000px);
+    transform: translateY(100px) rotateX(-30deg) translateZ(-2000px);
 }
 
 div.product {
